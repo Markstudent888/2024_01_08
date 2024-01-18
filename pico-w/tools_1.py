@@ -6,8 +6,8 @@ from machine import WDT
 
 rp2.country('TW') #設定我們的wifi的地區是台灣(可以不設)
 
-ssid = 'FamilyC'
-password = 'q6msz6qz'
+ssid = 'xxxxxx'
+password = 'xxxxx'
 
 wlan = network.WLAN(network.STA_IF)
 wlan.active(True)
