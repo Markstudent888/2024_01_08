@@ -18,9 +18,12 @@ def counter(c:int):
     counter = redis_conn.incr('test:increment',c)
     return {"Counter": counter}
 
-@app.get("/items/{item_id}")
-def read_item(item_id: int, q:str | None = None):
-    return {"item_id": item_id, "q": q}
+@app.get("/pico_w/{date}")
+async def read_item(date:str ,address:str,celsius:float=0.0):
+    print(f"日期:{date}")
+    print(f"位置:{address}")
+    print(f"攝氏:{celsius}")
+    return {"狀態":"儲存成功"}
 
 '''
 from typing import Union
