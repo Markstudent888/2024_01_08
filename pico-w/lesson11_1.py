@@ -44,7 +44,7 @@ while True:
                 
                 is_press = False
                 
-                url_str = f'https://openapi-test-slqg.onrender.com/pico_w/{currentTime}?address=chicken_KFC&celsius={temperature}&light={light}'
+                url_str = f'https://openapi-test-slqg.onrender.com/pico_w/{currentTime}?address=tvdi_school&celsius={temperature}&light={light}'
                 try:
                     response = urequests.get(url_str)
                     pass
