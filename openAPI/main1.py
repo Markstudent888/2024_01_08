@@ -1,4 +1,4 @@
-from typing import Union
+#from typing import Union
 from fastapi import FastAPI
 import redis
 import os
@@ -61,8 +61,25 @@ async def read_item(date:str ,address:str,celsius:float=0.0):
     print(f"日期:{date}")
     print(f"位置:{address}")
     print(f"攝氏:{celsius}")
-    
     return {"狀態":"儲存成功"}
+
+@app.get("/pico_w/")
+async def read_item(count:int=1):
+    date_get = redis_conn.lrange('pico_w:date',-1,-1)[0].decode()
+    address_get = redis_conn.hget('pico_w:address',date_get).decode()
+    temperature_get = redis_conn.hget('pico_w:temperature',date_get).decode()
+    light_get = redis_conn.hget('pico_w:light',date_get).decode()
+    print(date_get)
+    print(address_get)
+    print(temperature_get)
+    print(light_get)
+    return {'date':date_get,
+            'address':address_get,
+            'temperature':temperature_get,
+            'light':light_get
+            }
+
+
 
 '''
 from typing import Union
