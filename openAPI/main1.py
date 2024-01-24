@@ -61,7 +61,9 @@ async def read_item(date:str ,address:str,celsius:float=0.0):
     print(f"日期:{date}")
     print(f"位置:{address}")
     print(f"攝氏:{celsius}")
+    
     return {"狀態":"儲存成功"}
+
 '''
 from typing import Union
 from fastapi import FastAPI
