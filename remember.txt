@@ -1,0 +1,13 @@
+user@C103-03 MINGW64 ~/Documents/GitHub/2024_01_08/UI (main)
+$ source c:/Users/user/Documents/GitHub/2024_01_08/UI/.venv/Scripts/activate
+(.venv) 
+user@C103-03 MINGW64 ~/Documents/GitHub/2024_01_08/UI (main)
+$ streamlit run main.py
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8501
+  Network URL: http://172.16.13.3:8501
+
+下載成功
+下載成功
