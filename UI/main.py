@@ -3,7 +3,7 @@ import pandas as pd
 import streamlit as st
 from streamlit_autorefresh import st_autorefresh
 
-url = 'https://openapi-test1.onrender.com/pico_w/?count=10'
+url = 'https://openapi-test-slqg.onrender.com/pico_w/?count=10'
 st_autorefresh(interval=10000,limit=10)
 
 r = requests.get(url=url)
